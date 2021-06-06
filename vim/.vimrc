@@ -5,14 +5,8 @@ augroup filetype_vim
 augroup END
 " }}}
 
-" vim-plugins {{{
-call plug#begin()
-Plug 'tpope/vim-commentary'
-call plug#end()
-" }}}
-
 " general {{{
-"syntax enable
+syntax enable
 filetype plugin indent on
 set belloff=all " turns off beeping sounds on errors
 let mapleader="\<Space>"
