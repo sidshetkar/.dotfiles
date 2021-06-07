@@ -27,7 +27,7 @@ Plugins(using native vim 8 plugin manager) in Vim are handled using submodules. 
 3. Navigate to the vim plugin folder ('.dotfiles/vim/.vim/pack/plugins/start')
 4. Make a symlink to the corresponding submodule folder entry for the plugin
 
-The provided example below if if I wanted to add the vim-commentary plugin
+The provided example below shows adding the vim-commentary plugin
 ```zsh
 cd ~/.dotfiles/submodules
 git submodule add https://github.com/tpope/vim-commentary.git
