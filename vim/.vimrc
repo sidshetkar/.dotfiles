@@ -34,16 +34,19 @@ nnoremap <leader>r <C-w>r
 nnoremap <leader>x <C-w>x
 " new tab
 nnoremap <leader>t :tabedit<space>
+" netrw file explore open, x = eXplorer,
+" <C-w>H makes split take up entire vertical column on far vertical left
+nnoremap <leader>x :Vexplore<CR><C-w>H:vertical resize 30<CR>
 " find a file
 nnoremap <leader>f :find<space>
 " nnoremap <leader>f :Files<CR>
 " search across all files
-" sf = shift-f
-nnoremap <leader>sf :vimgrep<space>
+nnoremap <leader>g :vimgrep<space>
 " nnoremap <leader>sf :Rg<CR>
 " change between buffers easily
 nnoremap <leader>b :buffers<CR>:b<space>
  " quickfix list and make it take up entire bottom horizontally
+ " <C-w>J makes split take up entire horizontal row on bottom
  nnoremap <leader>qo :copen<CR><C-w>J
  nnoremap <leader>qc :cclose<CR>
 " copy to system clipboard
@@ -74,6 +77,10 @@ set showmatch " highlights matching [{()}] when your cursor is over one
 set number relativenumber " line numbers are relative to cursor's position
 " }}}
 
+" netrw {{{
+let g:netrw_liststyle=3 " tree style
+" }}}
+
 " searching {{{
 set hlsearch " highlight matches
 set incsearch
@@ -95,4 +102,8 @@ augroup spell_file_types
     autocmd!
     autocmd FileType markdown,text,latex,tex setlocal spell spelllang=en_us
 augroup END
+" }}}
+
+" mouse {{{
+set mouse=a " give mouse control in vim, good if other people need to use
 " }}}
