@@ -33,3 +33,7 @@ git submodule add https://github.com/tpope/vim-commentary.git
 cd ~/.dotfiles/vim/.vim/pack/plugins/start
 ln -s ../../../../../submodules/vim-commentary vim-commentary
 ```
+To update plugins just run
+```zsh
+git submodule update --remote
+```
