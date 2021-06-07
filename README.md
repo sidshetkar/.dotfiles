@@ -37,3 +37,6 @@ To update plugins just run
 ```zsh
 git submodule update --remote
 ```
+
+# References
+* Inspiration for this dotfile structure came from [Leeren Chang](https://github.com/leeren/) and his [dotfiles repository](https://github.com/leeren/dotfiles). Also, check out his [video](https://www.youtube.com/watch?v=JFr28K65-5E) where he explains stuff about vim and his dotfile structure (dotfile structure is near the end) 
