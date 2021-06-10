@@ -92,6 +92,8 @@ set path+=** " search all current/subdirectories recursively, might turn off if 
 
 " autocomplete {{{
 set omnifunc=syntaxcomplete#Complete
+set completeopt-=menu
+set completeopt+=menuone
 set completeopt+=noselect " don't autoselect first option
 set completeopt+=noinsert " don't fill in text as you scroll through options
 set completeopt+=popup
