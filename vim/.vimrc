@@ -55,6 +55,8 @@ vnoremap <leader>Y "*y
 " past from system clipboard
 nnoremap <leader>p "+p
 vnoremap <leader>P "*p
+" clear highlight search
+nnoremap <leader>c :nohls<CR>
 " auto make second { 
 inoremap {<CR> {<CR>}<Esc>O
 " }}}
@@ -84,6 +86,21 @@ let g:netrw_liststyle=3 " tree style
 " searching {{{
 set hlsearch " highlight matches
 set incsearch
+" }}}
+
+" statusline {{{
+set laststatus=2 " enable status line
+set statusline=
+set statusline+=%#CursorColumn# " color
+set statusline+=%F " shows whole file path
+set statusline+=%{&modified?'[+]':''} " adds [+] if file has been modified but not saved
+set statusline+=%= " separator between left and right side
+set statusline+=\ %y " file type
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding} 
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%% " percentage through the file
+set statusline+=\ %l:%c " line and column number
+set statusline+=\ 
 " }}}
 
 " path {{{
