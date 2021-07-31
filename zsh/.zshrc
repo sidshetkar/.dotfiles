@@ -18,3 +18,4 @@ alias 'ga=git add'
 
 # competitive programming
 alias 'gxx=g++ -std=c++11 -O2 -Wall'
+alias 'gxf=g++ -std=c++11 -O2 -Wall -DLOCAL_PROJECT'

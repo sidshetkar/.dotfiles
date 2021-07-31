@@ -1,3 +1,9 @@
 [submodule "submodules/vim-commentary"]
 	path = submodules/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "submodules/supertab"]
+	path = submodules/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "submodules/AutoComplPop"]
+	path = submodules/AutoComplPop
+	url = https://github.com/vim-scripts/AutoComplPop.git

@@ -19,11 +19,9 @@ colorscheme gruvbox
 
 " key mappings {{{
 inoremap jk <Esc>
-nnoremap <leader>ev :vsplit $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>v :vsplit<space>
 " u = up
-nnoremap <leader>u :split<space>
+nnoremap <leader>s :split<space>
 " window movement 
 nnoremap <leader>h <C-w>h 
 nnoremap <leader>j <C-w>j
@@ -36,7 +34,7 @@ nnoremap <leader>x <C-w>x
 nnoremap <leader>t :tabedit<space>
 " netrw file explore open, x = eXplorer,
 " <C-w>H makes split take up entire vertical column on far vertical left
-nnoremap <leader>x :Vexplore<CR><C-w>H:vertical resize 30<CR>
+nnoremap <leader>n :Vexplore<CR><C-w>H:vertical resize 30<CR>
 " find a file
 nnoremap <leader>f :find<space>
 " nnoremap <leader>f :Files<CR>
@@ -55,10 +53,13 @@ vnoremap <leader>Y "*y
 " past from system clipboard
 nnoremap <leader>p "+p
 vnoremap <leader>P "*p
-" clear highlight search
-nnoremap <leader>c :nohls<CR>
+" competitive programming
+nnoremap <leader>c :!g++ -std=c++11 -O2 -Wall -DLOCAL_PROJECT %<CR>
+nnoremap <leader>r :!./a.out<CR>
 " auto make second { 
 inoremap {<CR> {<CR>}<Esc>O
+" short cut to zoom in or full view a window in a new tab, just :wq to get back with changes
+nnoremap <leader>z :tab split<CR>
 " }}}
 
 " spaces and tabs {{{
@@ -77,6 +78,8 @@ set wildmode=longest:full,full "
 set lazyredraw " redraw the screen only when needed
 set showmatch " highlights matching [{()}] when your cursor is over one
 set number relativenumber " line numbers are relative to cursor's position
+set cursorline " highlight current line
+" set cursorcolumn " highlight current column
 " }}}
 
 " netrw {{{
@@ -111,6 +114,7 @@ set path+=** " search all current/subdirectories recursively, might turn off if 
 set omnifunc=syntaxcomplete#Complete
 set completeopt-=menu
 set completeopt+=menuone
+set completeopt+=noselect
 set completeopt+=noinsert " don't fill in text as you scroll through options
 set completeopt+=popup
 " }}}
@@ -124,4 +128,12 @@ augroup END
 
 " mouse {{{
 set mouse=a " give mouse control in vim, good if other people need to use
+" }}}
+
+" window settings {{{
+set splitbelow splitright " makes split and vsplit default to below and right respectively
+" }}}
+
+" file {{{
+set autoread
 " }}}
