@@ -15,9 +15,18 @@ cd ~
 git clone https://github.com/sidshetkar/.dotfiles.git
 cd .dotfiles
 ```
-3. Now run stow on whatever configuration files you want synced. For example, if you want to sync vim settings you would run:
+3. Run stow on whatever configuration files you want synced. For example, if you want to sync vim settings you would run:
 ```zsh
 stow vim
+```
+4. Initialize all your submodules
+```zsh
+git submodule init
+```
+
+5. Install of your submodules and keep them up to date
+```zsh
+git submodule update --remote
 ```
 
 # Vim
