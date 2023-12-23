@@ -15,7 +15,10 @@ cd ~
 git clone https://github.com/sidshetkar/.dotfiles.git
 cd .dotfiles
 ```
-3. Run stow on whatever configuration files you want synced. For example, if you want to sync vim settings you would run:
+3. Run stow on whatever configuration files you want synced. For example, if you want to sync all the settings or just the vim settings you would run the following commands respectively:
+```zsh
+stow */
+```
 ```zsh
 stow vim
 ```

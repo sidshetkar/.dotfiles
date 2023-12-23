@@ -2,10 +2,10 @@
 bindkey -v
 
 # enable fzf (after vim ones so they aren't overwritten)
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # overwrite necessary vim bindings (not needed with fzf)
-# bindkey "^R" history-incremental-search-backward
+bindkey "^R" history-incremental-search-backward
 
 # command aliases
 alias 'll=ls -alhG'
