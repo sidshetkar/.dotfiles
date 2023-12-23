@@ -43,10 +43,13 @@ nnoremap <leader>g :vimgrep<space>
 " nnoremap <leader>sf :Rg<CR>
 " change between buffers easily
 nnoremap <leader>b :buffers<CR>:b<space>
- " quickfix list and make it take up entire bottom horizontally
- " <C-w>J makes split take up entire horizontal row on bottom
- nnoremap <leader>qo :copen<CR><C-w>J
- nnoremap <leader>qc :cclose<CR>
+" compile short cuts 
+nnoremap <leader>c :make<CR>
+" quickfix list and make it take up entire bottom horizontally
+" <C-w>J makes split take up entire horizontal row on bottom
+nnoremap <leader>qo :cw<CR><C-w>J
+nnoremap <leader>qn :cn<CR>
+nnoremap <leader>qp :cp<CR>
 " copy to system clipboard
 nnoremap <leader>y "+y
 vnoremap <leader>Y "*y
@@ -54,9 +57,9 @@ vnoremap <leader>Y "*y
 nnoremap <leader>p "+p
 vnoremap <leader>P "*p
 " competitive programming
-nnoremap <leader>c :!g++ -std=c++11 -O2 -Wall -DLOCAL_PROJECT %<CR>
-nnoremap <leader>r :!./a.out<CR>
-" auto make second { 
+" nnoremap <leader>c :!g++ -std=c++11 -O2 -Wall -DLOCAL_PROJECT %<CR>
+" nnoremap <leader>r :!./a.out<CR>
+" auto make closing braces "}"
 inoremap {<CR> {<CR>}<Esc>O
 " short cut to zoom in or full view a window in a new tab, just :wq to get back with changes
 nnoremap <leader>z :tab split<CR>
