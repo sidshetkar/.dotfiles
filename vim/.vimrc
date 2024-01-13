@@ -45,9 +45,15 @@ nnoremap <leader>g :vimgrep<space>
 nnoremap <leader>b :buffers<CR>:b<space>
 " compile short cuts 
 nnoremap <leader>c :make<CR>
-" quickfix list and make it take up entire bottom horizontally
-" <C-w>J makes split take up entire horizontal row on bottom
-nnoremap <leader>qo :cw<CR><C-w>J
+" quickfix list
+function! ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen
+    else
+        cclose
+    endif
+endfunction
+nnoremap <leader>qt :call ToggleQuickFix()<CR>
 nnoremap <leader>qn :cn<CR>
 nnoremap <leader>qp :cp<CR>
 " copy to system clipboard

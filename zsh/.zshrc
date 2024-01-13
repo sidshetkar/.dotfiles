@@ -2,17 +2,10 @@
 bindkey -v
 
 # Enable colors
-autoload -U colors && colors # Enable git integration for the prompt
-autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-zstyle ':vcs_info:git:*' formats '%F{red}(%b%u%c)'
-zstyle ':vcs_info:*' enable git
+autoload -U colors && colors
 
 # Set prompt structure
-NEWLINE=$'\n' # only way found to add new line into the prompt variable
-PROMPT='%B%{$fg[blue]%}[%{$fg[white]%}%n%{$fg[red]%}@%{$fg[white]%}%m%{$fg[blue]%}] %F{red}${vcs_info_msg_0_}%f %{$fg[cyan]%}%~%{$reset_color%} ${NEWLINE}> '
+PROMPT="%B%{$fg[blue]%}[%{$fg[white]%}%n%{$fg[red]%}@%{$fg[white]%}%m%{$fg[blue]%}] %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%} "
 
 # Enable autocomplete
 autoload -U compinit
@@ -46,4 +39,5 @@ alias 'gxf=g++ -std=c++11 -O2 -Wall -DLOCAL_PROJECT'
 
 # Load syntax highlighting (this must be the last command)
 # If you can find a succinct and clean way to get syntax highlighting without this module, use that instead and delete this git submodule
+# Maybe you can just open the command in vim if you want syntax highlighting
 source $HOME/.dotfiles/submodules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
